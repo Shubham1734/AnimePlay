@@ -1,0 +1,34 @@
+your-nextjs-project/
+|-- pages/
+|   |-- index.js
+|   |-- _app.js
+|   |-- _document.js
+|   |-- my-profile.js
+|   |-- recently-visited.js
+|   |-- watch-list.js|-- [show]/
+|       |-- [episode].js
+|       |-- index.js
+|   |-- api/
+|       |-- get-shows.js
+|       |-- add-shows.js
+|       |-- chk-user.js
+|       |-- get-specific-show.js
+|       |-- update-user.js
+|       |-- hello.js
+|-- components/
+|   |-- Navbar/
+|       |-- Navbar.js
+|   |-- Footer/
+|       |-- Footer.js
+|   |-- ShowCollection/
+|       |-- ShowCollection.js
+|-- middleware/
+|   |-- moongoose.js
+|-- public/
+|   |-- favicon.ico
+|-- .env.local
+|-- next.config.js
+|-- package.json
+|-- server.js (your Express server file)
+|-- .gitignore
+|-- README.md

@@ -1,0 +1,310 @@
+@import "@/styles/_config.scss";
+
+.Banner {
+  position: relative;
+  width: 100vw;
+  height: 80.5vh;
+  min-height: 650px;
+
+  & > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  @media (max-width: 768px) {
+    width: 105vw;
+  }
+
+  & > div {
+    // background: linear-gradient(80deg, #111111ff, #1111115f, #22222200);
+    background-color: #2021253f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+
+    & > div {
+      width: 90vw;
+      padding: 2rem;
+      max-width: 700px;
+    }
+  }
+
+  & > span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(0deg, #202125ff, #2021255f, #20212500);
+  }
+
+  .SpotLight {
+    font-size: 1.35rem;
+    color: #a9ff1c;
+  }
+
+  .BannerTitle {
+    font-size: 3.5rem;
+    margin: 1rem 0rem 1.8rem 0rem;
+    font-family: $primary-font-bold;
+    a {
+      text-decoration: none !important;
+      color: white !important;
+    }
+  }
+
+  .BannerDescription {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .BannerButtons {
+    margin: 1rem 0;
+    button,
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      background-color: #5b5b61;
+      color: white;
+      margin-right: 1rem;
+      border: none;
+      outline: none;
+      padding: 0.6rem 1rem;
+      border-radius: 30px;
+      font-size: 1.05rem;
+
+      &:active {
+        border: none;
+        outline: none;
+      }
+    }
+
+    .BannerButtonWatchNow {
+      background-color: #a9ff1c;
+      color: black;
+    }
+  }
+}
+
+.BetweenBannerAndTrending {
+  width: 100%;
+  height: 40px;
+  background-color: #212226;
+}
+
+.TrendingCollection {
+  background: linear-gradient(#202125, #2c2d31, #0f1013);
+  padding: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 2rem;
+  overflow-y: scroll;
+  transition: 300ms;
+  padding-bottom: 1.5rem;
+
+  &::-webkit-scrollbar {
+    transition: 300ms;
+    width: 1em;
+    height: 0.5em;
+  }
+
+  &::-webkit-scrollbar-track {
+    transition: 300ms;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    transition: 300ms;
+    background-color: transparent;
+    outline: 1px solid transparent;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      transition: 300ms;
+      width: 1em;
+    }
+
+    &::-webkit-scrollbar-track {
+      transition: 300ms;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      transition: 300ms;
+      background-color: darkgrey;
+      border-radius: 30px;
+      outline: 1px solid slategrey;
+    }
+  }
+
+  .Trending {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 3.2rem auto;
+    grid-template-rows: 1fr;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    background: linear-gradient(
+      360deg,
+      #000,
+      #111,
+      #333,
+      #39393d,
+      #333337,
+      #39393d,
+      #333337,
+      #38383c,
+      #494a50
+    );
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .TrendingDetails {
+      display: grid;
+      grid-template-rows: auto 1rem;
+      grid-gap: 2.5rem;
+    }
+
+    .TrendingRank {
+      color: #a9ff1c;
+      font-weight: 900;
+      font-family: $primary-font-bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+      transform: translateY(-0.5rem);
+    }
+
+    .TrendingTitle {
+      writing-mode: vertical-lr;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.Ranking {
+  .RankingBox {
+    background-color: #4a4b51;
+
+    .RankingItem {
+      display: grid;
+      grid-template-columns: 100px auto;
+
+      img {
+        width: 50px;
+        aspect-ratio: 9/16;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.Show {
+  width: 180px;
+  text-decoration: none;
+  color: white;
+  background-color: #2a2c31;
+  height: 280px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 4rem;
+  grid-gap: 0.5rem;
+
+  img {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .ShowTitle {
+    font-weight: 900;
+  }
+
+  .ShowDetails {
+    padding-left: 0.5rem;
+  }
+}
+
+.Title {
+  color: #a9ff1c;
+  font-size: 1.8rem;
+  font-family: $primary-font-bold;
+  margin: 0;
+  padding-left: 2rem;
+  margin: 0rem;
+}
+
+.WatchList,
+.RecentlyVisited,
+.Suggestions {
+  margin: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 2rem;
+  overflow-x: scroll;
+  padding-bottom: 1.8rem;
+  transition: 300ms;
+
+  &::-webkit-scrollbar {
+    transition: 300ms;
+    width: 1em;
+
+    height: 0.5em;
+  }
+
+  &::-webkit-scrollbar-track {
+    transition: 300ms;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    transition: 300ms;
+    background-color: transparent;
+    outline: 1px solid transparent;
+    border-radius: 30px;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      transition: 300ms;
+      width: 1em;
+    }
+
+    &::-webkit-scrollbar-track {
+      transition: 300ms;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      transition: 300ms;
+      background-color: darkgrey;
+      outline: 1px solid slategrey;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@import "@/styles/_config.scss";
+
+.ShowCollection {
+  width: 100vw;
+  max-width: 1200px;
+  padding: 0rem 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: flex-start;
+  // align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 200px));
+  gap: 1.5rem;
+  grid-auto-flow: dense;
+  justify-content: center;
+}
+
+.Show {
+  width: 100%;
+  position: relative;
+  background-color: #2a2c31;
+  color: white;
+  text-decoration: none;
+  // min-width: 180px;
+  // max-width: 2000px;
+  height: 300px;
+  // overflow: hidden;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: 250ms;
+
+  display: grid;
+  grid-template-rows: calc(100% - 70px) 70px;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  .details {
+    padding: 0.5rem;
+
+    .title {
+      font-size: 1rem;
+
+      &:hover {
+        color: #cae962;
+      }
+    }
+
+    .type {
+      margin-top: 0.3rem;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.AddHover {
+  &:hover {
+    scale: 1.08;
+    .title {
+      color: #cae962;
+    }
+  }
+}
+
+.CrossButton {
+  position: absolute;
+  right: -12.5px;
+  top: -12.5px;
+
+  width: 25px;
+  height: 25px;
+  font-size: 0.9rem;
+  border-radius: 50%;
+
+  background-color: white;
+  color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 300ms;
+
+  &:active {
+    border: none;
+    outline: none;
+  }
+
+  &:hover {
+    background-color: red;
+    color: white;
+  }
+}

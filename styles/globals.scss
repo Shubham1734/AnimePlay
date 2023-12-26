@@ -1,0 +1,34 @@
+@import "@/styles/_config.scss";
+
+body {
+  font-family: $primary-font-regular;
+  background-color: #0f1013;
+  color: white;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    transition: 300ms;
+    width: 1em;
+  }
+
+  &::-webkit-scrollbar-track {
+    transition: 300ms;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    transition: 300ms;
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+
+  @media (max-width: 768px) {
+    width: 105vw;
+  }
+}
+
+// * {
+//   outline: 1px solid red;
+// }
